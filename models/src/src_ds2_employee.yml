@@ -1,0 +1,26 @@
+version:2
+
+models:
+  - name:src_ds2_employee
+    column:
+
+    -name: fullname
+     tests:
+       - not_null
+
+    -name:empid
+     tests:
+     - not_null
+
+     -name:kind
+      tests:
+      - accepted_values:
+        values: ['person']
+      
+      -name:gender
+        tests:
+        - accepted_values;
+          values:['male',
+          'female'
+          'unknown']
+   
